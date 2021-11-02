@@ -7,23 +7,23 @@ To use the microservice navigate to http://localhost:5000/predict?studytime=A&ab
 
 You will have to change the variables A,B,C,D,E,F,G to their appropriate values.
 
-A ranges from 1-4
-B ranges from 0-93
-C ranges from 15-22
-D ranges from 1-5
-E ranges from 1-5
-F ranges from 1-4
-G ranges from 1-5
+- A ranges from 1-4
+- B ranges from 0-93
+- C ranges from 15-22
+- D ranges from 1-5
+- E ranges from 1-5
+- F ranges from 1-4
+- G ranges from 1-5
 
 The variables meanings can be found below
 
-A: studytime - weekly study time (numeric: 1 - <2 hours, 2 - 2 to 5 hours, 3 - 5 to 10 hours, or 4 - >10 hours)
-B: absences - number of school absences (numeric: from 0 to 93)
-C: age - student's age (numeric: from 15 to 22)
-D: health - current health status (numeric: from 1 - very bad to 5 - very good)
-E: goout - going out with friends (numeric: from 1 - very low to 5 - very high)
-F: failures - number of past class failures (numeric: n if 1<=n<3, else 4)
-G: famrel - quality of family relationships (numeric: from 1 - very bad to 5 - excellent)
+- A: studytime - weekly study time (numeric: 1 - <2 hours, 2 - 2 to 5 hours, 3 - 5 to 10 hours, or 4 - >10 hours)
+- B: absences - number of school absences (numeric: from 0 to 93)
+- C: age - student's age (numeric: from 15 to 22)
+- D: health - current health status (numeric: from 1 - very bad to 5 - very good)
+- E: goout - going out with friends (numeric: from 1 - very low to 5 - very high)
+- F: failures - number of past class failures (numeric: n if 1<=n<3, else 4)
+- G: famrel - quality of family relationships (numeric: from 1 - very bad to 5 - excellent)
 
 
 ## Features Used to Train the Model
@@ -53,4 +53,9 @@ To integrate the new model with the Flask API, run the following cell in model_b
     joblib.dump(clf, 'home/matrix/dockerfile/apps/model.pkl')
 
 ## Tests 
-We have set up a Github Actions workflow that uses pytest to test our API.
+
+### API Testing
+We have set up a Github Actions workflow that uses pytest to test our API. In test_service.py, we have unit tests that check for basic functionality of the API.
+
+### Model Testing
+In model_build.ipynb, you can see the accuracy of the model on the training and testing data.
