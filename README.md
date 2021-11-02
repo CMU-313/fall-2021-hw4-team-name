@@ -1,3 +1,21 @@
-# Software Engineering for Machine Learning Assignment
+# Team Name HW4
 
-Please consult the [homework assignment](https://cmu-313.github.io//assignments/hw4) for full context and instructions for this code.  
+## API instructions:
+
+
+
+
+## Features Used to Train the Model
+
+
+
+
+
+## Deployment Instructions
+
+
+
+
+
+## Tests 
+ 
