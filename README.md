@@ -39,12 +39,12 @@ From the dockerfile directory, run:
 
     docker build -t ml:latest .
     docker run -d -p 5000:5000 ml
-    curl http://localhost:5000/predict
+    
 
-And navigate to http://localhost:5000/predict within your web browser.
+And follow the API instructions to send GET request to the microservice.
 
 ### For Developers
-To make changes to the ML microservice, edit the model as needed in model_build.ipynb, and the API as needed in dockerfile/apps/app.py. 
+To make changes to the ML microservice, edit the model as needed in model_build.ipynb, and the flask API as needed in dockerfile/apps/app.py. 
 
 To integrate the new model with the Flask API, run the following cell in model_build.ipynb:
 
@@ -55,7 +55,9 @@ To integrate the new model with the Flask API, run the following cell in model_b
 ## Tests 
 
 ### API Testing
-We have set up a Github Actions workflow that uses pytest to test our API. In test_service.py, we have unit tests that check for basic functionality of the API.
+We have set up a Github Actions workflow that uses pytest to test our API.
+In test_service.py, we have unit tests that check for basic functionality of the API.
+
 
 ### Model Testing
 In model_build.ipynb, you can see the accuracy of the model on the training and testing data.

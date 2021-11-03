@@ -16,8 +16,15 @@ def test_client(client):
     print(r.data)
     print("TEST PASSED!")
 
-def test_predict(client):
+def test_predict1(client):
     r = client.get('/predict?age=15&health=5&absences=5&studytime=4&goout=5&failures=2&famrel=5')
+    print("\n====== Result TEST_PREDICT ======")
+    print(int(r.data))
+    assert(int(r.data) == 0)
+    print("TEST PASSED!")
+
+def test_predict2(client):
+    r = client.get('/predict?age=15&health=5&absences=0&studytime=4&goout=0&failures=0&famrel=5')
     print("\n====== Result TEST_PREDICT ======")
     print(int(r.data))
     assert(int(r.data) == 0)
