@@ -25,6 +25,8 @@ The variables meanings can be found below
 - F: failures - number of past class failures (numeric: n if 1<=n<3, else 4)
 - G: famrel - quality of family relationships (numeric: from 1 - very bad to 5 - excellent)
 
+The output of 1 means that the student is of high quality, while 0 menas that the student is not.
+
 
 ## Features Used to Train the Model
 
@@ -69,6 +71,9 @@ These features and the reasons why are listed below:
 7. Famrel:    This is debatable, but the better the family relations, probably less stress on a person's life,
               which is definitely helpful to someone's school life, as school can be very stressful already.
 
+The baseline model score is around 50, while the new model is around 98 when the model is used to predict on 
+the dataset used to train the model.
+
 ## Deployment Instructions
 
 ### For Users
@@ -94,6 +99,7 @@ To integrate the new model with the Flask API, run the following cell in model_b
 ### API Testing
 We have set up a Github Actions workflow that uses pytest to test our API.
 In test_service.py, we have unit tests that check for basic functionality of the API.
+Tests include normal inputs and illegal inputs. 
 
 
 ### Model Testing
