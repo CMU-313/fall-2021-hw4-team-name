@@ -20,5 +20,5 @@ def test_predict(client):
     r = client.get('/predict?age=15&health=5&absences=5&studytime=4&goout=5&failures=2&famrel=5')
     print("\n====== Result TEST_PREDICT ======")
     print(int(r.data))
-    assert(int(r.data) == 1)
+    assert(int(r.data) == 0)
     print("TEST PASSED!")
